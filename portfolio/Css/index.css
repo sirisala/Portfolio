@@ -1,0 +1,389 @@
+*{
+    margin: 0px;
+    /* font-family: 'Dancing Script', cursive; */
+    
+    color: white;
+}
+
+
+body{
+    background-color: #232d3f;
+}
+.font-heading{
+    font-family: 'Dancing Script', cursive;
+    font-size: xx-large;
+}
+.pink{
+    color: #FF4655;  
+}
+.pink-bg{
+    background-color: #FF4655;
+}
+.pink-bg2{
+    background-color: #bd2b38;
+    
+}
+.bg{
+    background-color: #072541;
+}
+#user-img{
+    background-image: url("");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    /* width: 300px;  */
+    height: 500px;
+
+}
+.user{
+  height: 100%;
+  width: 55%;
+  position: relative;
+  bottom: 6%;
+  transform: scale(1.1);
+}
+.round{
+    border-radius: 20px;
+}
+.round1{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.l-container{
+    width: 80%; 
+}
+.r-container{
+    margin-left: 20%;
+}
+.round2{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.t-shadow{
+    /* color: rgb(0, 0, 160); */
+    text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+.t2-shadow{
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.brand{
+    transform: scale(0.45);
+}
+.btn-radius:hover{
+    box-shadow: 0 0 3px 3px #ff4656a8;
+}
+
+.btn-radius{
+    border-radius: 30px;
+}
+.btn-radius1:hover{
+    box-shadow: 0 0 3px 3px #ff4656a8;
+}
+.btn-radius1{
+    border-radius: 10px;
+}
+
+.brand:hover{
+    transform: scale(0.5);
+    transition: 0.3s; 
+}
+#about-section:target,#project-section:target,#website-section:target,#contact-section:target{display: block;}
+
+/* *****************************************************about,proj,web,cont css************************** */
+.font1{
+    font-family: 'Poppins', sans-serif;
+}
+/* *****************************************************about,proj,web,cont css************************** */
+
+/* ************************************contact css************************** */
+.social-media-icon{
+    height: 100px;
+    width: 100px;
+}
+.social-media-icon:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.contact-media-icon{
+    height: 80px;
+    width: 80px;
+}
+.download:hover{
+    background-color:#c53642;
+    
+}
+.font-size{
+    font-size: 20px;
+}
+/* ************************************contact css************************** */
+.font{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* **************************************************card start******************************************** */
+
+
+  .card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 0;
+  }
+  .display-center{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+  }
+  
+
+  /* Individual card */
+  .card {
+    /* padding: 0% 5%; */
+    /* border-radius: 20%; */
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 0px darkblue;
+    box-shadow: 3px 3px 4px #181717a2;
+    perspective: 1000px; /* This enables the 3D effect */
+    transform-style: preserve-3d; /* This preserves the 3D effect when rotating */
+    transition: transform 0.8s ease-in-out; /* This adds a smooth transition to the flip animation */
+  }
+  
+
+  /* Front side of the card */
+  .front {
+    /* border-radius: 20%; */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* This hides the back side of the card when it's not flipped */
+    background-color:#072541;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Back side of the card */
+  .back {
+    /* border-radius: 20%; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #072541;
+    text-align: center;
+    padding: 20px;
+    transform: rotateY(180deg); /* This rotates the back side of the card 180 degrees */
+  }
+  .front, .back {
+    font-size: calc(12px + 0.5vw);
+  }
+
+  /* Flip the card on hover */
+  .card:hover {
+    transform: rotateY(180deg); /* This rotates the card 180 degrees on hover */
+  }
+  @media (max-width: 640px) {
+    .card-container {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mobile-f {
+      flex-direction: column;
+    }
+  
+    
+  }
+  
+  /* **************************************************card end******************************************** */
+
+
+/* **************************************************tech skills start******************************************** */
+.row.no-gutters {
+    margin: -5px !important;
+  }
+  
+  .row.no-gutters > * {
+    padding: 5px !important;
+  }
+  .programming-img:hover{
+        transform: scale(1.1);
+        transition: 0.3s ease-out;  
+  }
+  .scroll-style::-webkit-scrollbar {
+    display: none;
+    background-color:transparent;
+  }
+  .scroll-style::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+  
+  .flipper {
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    -webkit-perspective: 800px;
+    -ms-perspective: 800px;
+    perspective: 800px;
+  }
+  
+  @media (min-width: 576px) {
+  
+    .ratio-not-1-1 {
+      padding-bottom: calc(50% - 5px);
+    }
+  
+  }
+  
+  .flipper-card {
+   
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .flipper-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 50px;
+    background: #2dafe345;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flipper-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.447);
+    /* display : flex; */
+    /* align-items: center;
+    justify-content: center; */
+  }
+  .flipper-back-center{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flipper-back {
+    /* background: #fff; */
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  
+  .flipper-card.flipper-is-flipped {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+
+
+/* ********************************************************************   */
+/* .content-visibility{
+  display: none;
+}
+.content-visibility.active-visibility{
+  display: inline-flex;
+} */
+
+/* **************************************************tech skills end******************************************** */
+
+
+
+
+
+
+
+
+
+
+@media (max-width:800px) {
+    .row{
+        display: block;
+    }
+    #user-img{
+        height: 300px;
+    }
+    .brand-div{
+        margin-left: -8%;
+    }
+    .responsive{
+        padding-top: 40%;
+    }
+    
+}
+
+@media  (max-width:620px){
+    .textsize{
+        font-size: 20px;
+    }
+    .heading-textsize{
+        font-size: 15px;
+    }
+    /* .contact-media-icon{
+        height: 60px;
+        width: 60px;
+    }
+    .social-media-icon{
+        height: 60px;
+        width: 60px;
+    } */
+
+}
+
+@media (max-width:1060px) and (min-width:620px) {
+    .textsize{
+        font-size: 40px;
+    }
+     .heading-textsize{
+        font-size: 30px;
+    }
+}
+
+@media (max-width:1116px) {
+    .row{
+        display: flexbox;
+    }
+}
+
+@media (max-width:866px) {
+    .social-media-icon{
+        height: 50px;
+        width: 50px;
+    }
+    .row{
+        display:flex;
+        flex-direction: row;
+    }
+}
+
+
+
+
