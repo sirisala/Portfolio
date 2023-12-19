@@ -8,6 +8,7 @@
 
 body{
     background-color: #232d3f;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }
 .font-heading{
     font-family: 'Dancing Script', cursive;
@@ -15,6 +16,9 @@ body{
 }
 .pink{
     color: #FF4655;  
+}
+.pink1{
+  color: #ff5946;  
 }
 .pink-bg{
     background-color: #FF4655;
@@ -32,7 +36,6 @@ body{
     background-repeat: no-repeat;
     /* width: 300px;  */
     height: 500px;
-
 }
 .user{
   height: 100%;
@@ -41,6 +44,27 @@ body{
   bottom: 6%;
   transform: scale(1.1);
 }
+@media (max-width:600px){
+  .user{
+    height:100%;
+    width: 100%;
+    position: relative;
+    bottom: 6%;
+    transform: scale(1.1);
+  }
+}
+@media (max-width:400px){
+  .user{
+    height:100%;
+    width: 140px;
+    position: relative;
+    bottom: 6%;
+    transform: scale(1.0);
+  }
+}
+
+
+
 .round{
     border-radius: 20px;
 }
@@ -140,11 +164,11 @@ body{
   /* Individual card */
   .card {
     /* padding: 0% 5%; */
-    /* border-radius: 20%; */
+    border-radius: 20%;
     position: relative;
     width: 300px;
     height: 200px;
-    background-color: #fff;
+    background-color: #072541;
     border: 0px darkblue;
     box-shadow: 3px 3px 4px #181717a2;
     perspective: 1000px; /* This enables the 3D effect */
@@ -155,7 +179,7 @@ body{
 
   /* Front side of the card */
   .front {
-    /* border-radius: 20%; */
+    border-radius: 20%;
     position: absolute; 
     top: 0;
     left: 0;
@@ -167,18 +191,20 @@ body{
     justify-content: center;
     text-align: center;
     padding: 20px;
+    
   }
 
   /* Back side of the card */
   .back {
-    /* border-radius: 20%; */
+    border-radius: 20%;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background-color: #072541;
+    background-color: #FF4655;
+   
     text-align: center;
     padding: 20px;
     transform: rotateY(180deg); /* This rotates the back side of the card 180 degrees */
@@ -221,9 +247,9 @@ body{
   .row.no-gutters > * {
     padding: 5px !important;
   }
-  .programming-img:hover{
-        transform: scale(1.1);
-        transition: 0.3s ease-out;  
+  .programming-img:hover{   
+    transform: scale(1.1);
+    transition: 0.3s ease-out;  
   }
   .scroll-style::-webkit-scrollbar {
     display: none;
@@ -387,3 +413,63 @@ body{
 
 
 
+.glitchy-text {
+  position: relative;
+  font-size: 100px;
+  font-family: monospace;
+  color: #fff;
+  text-shadow:
+    0 0 5px rgba(0, 0, 0, 0.2),
+    0 0 10px rgba(255, 0, 0, 0.5);
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(5px) skewX(5deg);
+  }
+  50% {
+    transform: translateX(-5px) skewX(-5deg);
+  }
+  75% {
+    transform: translateX(0px) skewX(0deg);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.glitchy-text {
+  
+  font-family: 'Orbitron', sans-serif;
+  transform: scale(0.5);
+  animation: glitch-image 1s  infinite;
+  color: #ddb8bb;
+  
+  text-shadow: 0 -12px 0px #FF4655, 0 -12px 14px #FF4655;
+  
+}
+
+
+
+
+@keyframes glitch-image {
+  0% {
+    filter: brightness(100%);
+  }
+  25% {
+    filter: brightness(150%) hue-rotate(10deg);
+  }
+  50% {
+    filter: brightness(75%) hue-rotate(-10deg);
+  }
+  75% {
+    filter: brightness(100%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
